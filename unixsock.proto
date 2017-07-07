@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package unixsock;
+
+message Obj {
+    int64 value = 1;
+}
+
+service Compute {
+    rpc Double (Obj) returns (Obj);
+}
